@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="icon" type="image/png" href="favicon-768.png"/>
+        <link rel="manifest" href="manifest.json">
+        <link rel="stylesheet" href="bundle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <meta charset="UTF-8">
+        <title>Screen Recorder</title>
+    </head>
+    <body>
+        <div class="home-container">
+            <h1 id="title">Screen Recorder</h1>
+            <button class="mdc-fab mdc-fab--extended" id="selectScreenButton">
+                <div class="mdc-fab__ripple"></div>
+                <span class="material-icons mdc-fab__icon">tv</span>
+                <span class="mdc-fab__label">Select a screen</span>
+            </button>
+        </div>
+        <video id="preview" autoplay muted></video>
+        <button class="mdc-fab" id="startButton" aria-label="Start">
+            <div class="mdc-fab__ripple"></div>
+            <span class="mdc-fab__icon material-icons">stop_circle</span>
+        </button>
+        <span id="countdown">3</span>
+        <button class="mdc-fab" id="stopButton" aria-label="Stop">
+            <div class="mdc-fab__ripple"></div>
+            <span class="mdc-fab__icon material-icons">stop</span>
+        </button>
+        <video id="recording" controls></video>
+        <form action="index.html">
+            <button class="mdc-fab" id="newRecordingButton" aria-label="New">
+                <div class="mdc-fab__ripple"></div>
+                <span class="mdc-fab__icon material-icons">settings_backup_restore</span>
+            </button>
+        </form>
+        <a id="downloadButtonLink">
+            <button class="mdc-fab" id="downloadButton" aria-label="Download">
+                <div class="mdc-fab__ripple"></div>
+                <span class="mdc-fab__icon material-icons">get_app</span>
+            </button>
+        </a>
+        <a href="about.html">
+            <i class="material-icons md-18" id="infoIcon">info</i>
+        </a>
+        <script src="recorder.js"></script>
+        <script src="bundle.js" async></script>
+        <script type="module">
+            import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+            const el = document.createElement('pwa-update');
+            document.body.appendChild(el);
+        </script>
+    </body>
+</html>

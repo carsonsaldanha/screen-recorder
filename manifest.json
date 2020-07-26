@@ -1,0 +1,25 @@
+{
+  "name": "Screen Recorder",
+  "short_name": "Screen Recorder",
+  "description": "Free and private screen recording web app",
+  "icons": [
+    {
+      "src": "favicon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "favicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "favicon-768.png",
+      "type": "image/png",
+      "sizes": "768x768"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#C5221F"
+}

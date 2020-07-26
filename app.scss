@@ -1,0 +1,123 @@
+// Establishes red theme color global variable
+$color: #C5221F;
+
+// Gets Material assets
+@use "@material/fab/mdc-fab";
+@use "@material/fab";
+
+// Imports Poppins and Roboto from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap');
+
+// Specifies coloring for dark theme
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: white;
+  }
+}
+
+// Sets font for body
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+// Removes blue URL color
+a {
+  color: inherit;
+}
+
+// Vertically and horizontally centers content
+.home-container {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-65%);
+  -webkit-transform: translateX(-50%) translateY(-65%);
+  transform: translateX(-50%) translateY(-65%);
+}
+
+// Sets padding for title
+#title {
+  padding-bottom: 3%;
+}
+
+// Styles select screen FAB
+#selectScreenButton {
+  @include fab.container-color($color);
+  @include fab.extended-padding(12px, 12px);
+}
+
+// Positions preview and recording video boxes
+#preview, #recording {
+  display: none;
+  width: 50%;
+  padding-top: 5%;
+	margin: 0 auto;
+}
+
+// Positions countdown text
+#countdown {
+  display: none;
+  font-size: 100px;
+  z-index: 10;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-65%);
+  -webkit-transform: translateX(-50%) translateY(-65%);
+  transform: translateX(-50%) translateY(-65%);
+}
+
+// Styles and positions recording FABs
+#startButton, #stopButton, #newRecordingButton, #downloadButton {
+  @include fab.container-color($color);
+  @include fab.icon-size(30px, 30px);
+  display: none;
+  position: absolute;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+// Positions start and stop FABs
+#startButton, #stopButton {
+  top: 90%;
+  left: 50%;
+}
+
+// Positions new recording FAB
+#newRecordingButton {
+  top: 90%;
+  left: 46%;
+}
+
+// Positions download FAB
+#downloadButton {
+  top: 90%;
+  left: 54%;
+}
+
+// Positions info icon
+#infoIcon {
+  position: absolute;
+  top: 97.1%;
+  left: 98.3%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+// Sets font and margins for about description
+#aboutDescription {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+// Specifies font size for Material Icon
+.material-icons.md-36 {
+  font-size: 36px;
+}
