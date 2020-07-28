@@ -47,7 +47,7 @@ selectScreenButton.addEventListener("click", function startStream() {
         return new Promise(resolve => preview.onplaying = resolve);
     // Calls startRecording() with the preview stream and receives recordedChunks (data) when finished recording    
     }).then(() => startRecording(preview.captureStream())).then(recordedChunks => {
-        // Merges the chunks into a single Blob under WebM format
+        // Merges the chunks into a single Blob under MP4 format
         let recordedBlob = new Blob(recordedChunks, {
             type: "video/mp4"
         });
