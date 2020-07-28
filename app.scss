@@ -26,6 +26,11 @@ a {
   color: inherit;
 }
 
+// Hides pop-up message by default
+#popUp {
+  display: none;
+}
+
 // Vertically and horizontally centers content
 .home-container {
   text-align: center;

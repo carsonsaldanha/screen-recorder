@@ -9,6 +9,7 @@
         <title>Screen Recorder</title>
     </head>
     <body>
+        <h1 id="popUp"><em>Oh no! Screen recording from this web app only works on desktop browsers right now due to an API limitation. Please visit this site on a computer!</em></h1>
         <div class="home-container">
             <h1 id="title">Screen Recorder</h1>
             <button class="mdc-fab mdc-fab--extended" id="selectScreenButton">
@@ -45,6 +46,7 @@
         </a>
         <script src="recorder.js"></script>
         <script src="bundle.js" async></script>
+        <!-- Register PWA service worker -->
         <script type="module">
             import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
             const el = document.createElement('pwa-update');
