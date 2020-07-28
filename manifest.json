@@ -1,7 +1,7 @@
 {
   "name": "Screen Recorder",
   "short_name": "Screen Recorder",
-  "description": "Free and private screen recording web app",
+  "description": "A free and private screen recording web app",
   "icons": [
     {
       "src": "favicon-192.png",
