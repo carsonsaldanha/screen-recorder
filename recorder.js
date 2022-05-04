@@ -13,12 +13,6 @@ let downloadButton = document.getElementById("downloadButton");
 let startTime;
 let duration;
 
-// Checks if user is on mobile and displays alert message
-if (!navigator.mediaDevices) {
-    alert("Oh no! Screen recording from this web app only works on desktop browsers right now due to an API limitation. Please visit this site on a computer!");
-    popUp.style.display = "block";
-}
-
 // Starts the input stream on select screen button click
 // Handles the media and downloading
 selectScreenButton.addEventListener("click", function startStream() {
@@ -34,7 +28,14 @@ selectScreenButton.addEventListener("click", function startStream() {
         },
         audio: true
     // When the Promise returned by getDisplayMedia() is resolved, do the following
-    }).then(stream => {
+    })
+    // Displays alert message if user is on mobile or doesn't have the recording API
+    .catch(function(error) {
+        console.log(error);
+        alert("Oh no! Screen recording from this web app only works on desktop browsers right now due to an API limitation. Please visit this site on a computer!");
+        popUp.style.display = "block";
+    })
+    .then(stream => {
         // Sets preview video box to the stream
         preview.srcObject = stream;
         // Sets download button's link to the stream
